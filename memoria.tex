@@ -158,12 +158,15 @@ Y por último agradecer a mi tutor Jesús M. González Barahona que desde el pri
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-El proyecto está construido para interpretar capturas realizadas por el programa Wireshark. Su función es la de leer la captura introducida e interpretar los campos que nos interesan, para poder representar, en una escena de Realidad Virtual en 3D, como es la red que se compone a través de las trazas obtenidas.
 
-En la escena, podremos ver todos los nodos que hay en la red, tanto en la capa Ethernet como IP, con sus correspondientes carteles identificando que IP o dirección Ethernet tienen.
-Estos nodos estarán conectados entre sí, solamente entre los que se intercambien paquetes.
+Este proyecto presenta una herramienta para la construcción de un simulador de red en 3D y Realidad Virtual en la que se produce un intercambio de paquetes. Su función es la de leer la captura que introduzcamos e interpretar los campos que nos interesan, para poder representar la red completa que se refleja en la captura y visualizarla en una escena de Realidad Virtual.
+
+En la escena, podremos ver todos los nodos que hay en la red, tanto en la capa Ethernet como IP, con sus correspondientes carteles identificando que dirección IP o dirección Ethernet tienen.
+Estos nodos estarán conectados entre sí mediante unas tuberías transparentes y solamente entre los nodos que se intercambien paquetes.
 
 Los paquetes podremos verlos también representados y en una animación, en la que veremos como se desplazan desde su nodo origen hasta su nodo destino. Dentro de cada paquete, al pinchar sobre él, podremos también ver las capas que tiene ese paquete, y los datos más relevantes de cada una de ellas, que se representaran en un cartel encima de ellos.
+
+Además, podremos ver toda esta escena y la animación con unas gafas de realidad virtual, y movernos libremente por la escena para recorrerla en la dirección que queramos y poder ver desde dentro toda la escena y la animación de cada uno de los paquetes.
 
 El proyecto está basado en tecnología A-Frame, un framework de JavaScript, el cual se utiliza para la creación de escenas en realidad virtual. Para ello he construido el código mediante HTML5 y JavaScript.
 
@@ -176,14 +179,16 @@ También he ido incluyendo en un repositorio de GitHub todas las pruebas y avanc
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-The project is built to interpret captures made by the Wireshark program. Its function is to read the capture introduced and interpret the fields that interest us, to be able to represent, in a 3D Virtual Reality scene, how the network is composed through the traces obtained.
+This project presents a tool for the construction of a 3D network simulator and Virtual Reality in which a packet exchange takes place. Its function is to read the capture that we introduce and interpret the fields that interest us, to be able to represent the complete network that is reflected in the capture and visualize it in a Virtual Reality scene.
 
-In the scene, we will be able to see all the nodes in the network, both in the Ethernet and IP layer, with their corresponding signs identifying which IP or Ethernet address they have.
-These nodes will be connected to each other, only between those that exchange packets.
+In the scene, we will be able to see all the nodes in the network, both in the Ethernet and IP layer, with their corresponding signs identifying which IP address or Ethernet address they have.
+These nodes will be connected to each other by means of transparent pipes and only between nodes that exchange packets.
 
-The packets will also be represented in an animation, in which we will see how they move from their source node to their destination node. Within each packet, by clicking on it, we can also see the layers of that packet, and the most relevant data of each of them, which will be represented in a poster above them.
+The packets will also be represented in an animation, in which we will see how they move from their source node to their destination node. Within each packet, by clicking on it, we can also see the layers that the packet has, and the most relevant data of each one of them, which will be represented in a poster above them.
 
-The project is based on A-Frame technology, a JavaScript framework, which is used for the creation of virtual reality scenes. For this I have built the code using HTML5 and JavaScript.
+In addition, we can see this whole scene and the animation with virtual reality glasses, and move freely through the scene to move in the direction we want and to see from inside the whole scene and the animation of each of the packages.
+
+The project is based on A-Frame technology, a JavaScript framework, which is used to create virtual reality scenes. For this I have built the code using HTML5 and JavaScript.
 
 I have also been including in a GitHub repository all the tests and developments that I have been doing during the process of developing the project, to have synchronized and updated to the latest version of the final code.
 
@@ -221,8 +226,7 @@ I have also been including in a GitHub repository all the tests and developments
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
 En este proyecto nos vamos a centrar en la construcción de un simulador de red en 3D, que se creará mediante la introducción de una traza de red capturada anteriormente y se podrá visualizar desde cualquier navegador y dispositivo.\\
-La tecnología en la que está basado el proyecto es A -frame
-\footnote{\url{https://aframe.io/}}, la cual nos va a permitir también poder utilizarlo y visualizarlo todo en realidad virtual.
+La tecnología en la que está basado el proyecto es A-Frame\footnote{\url{https://aframe.io/}}, la cual nos va a permitir también poder utilizarlo y visualizarlo todo en realidad virtual.
 
 \section{Contexto}
 \label{sec:seccion}
@@ -234,10 +238,12 @@ Tras estos primeros y mareantes intentos, vino la participación de otras grande
 
 Ahora nos encontramos inmersos en una situación social nunca antes vivida, en la que nos hemos tenido que adaptar a una nueva sociedad con mayor distanciamiento social por culpa de la COVID-19.
 \newpage
-Confinados en nuestras casas, la mayoría de nuestras relaciones sociales se encontraban en nuestra imaginación. Hemos acudido a internet, a las videoconferencias o a las experiencias inmersivas en Realidad Virtual para mandar a nuestro cerebro hasta otro lugar, aunque nuestro cuerpo siga sentado en el sofá de nuestro salón.\\
-Y es que, la pandemia de la COVID-19 inició un cambio forzado en nuestro estilo de vida, medio mundo nos vimos en “cuarentena” y en distanciamiento social. Pero, que la población mundial permaneciera confinada en sus domicilios durante semanas, se ha convertido en una oportunidad para el sector de las tecnologías, como el de la Realidad Virtual.\\
-\\
-Y, aunque hasta ahora la adopción de la Realidad Virtual a nivel doméstico había sido modesta, ahora mucha gente utiliza las gafas de Realidad Virtual para jugar, quedar con sus amigos, asistir a conciertos o, incluso, teletrabajar. Esto nos ha llevado a un nuevo resurgir de esta tecnología que vive en constante evolución.\\
+Confinados en nuestras casas, la mayoría de nuestras relaciones sociales se encontraban en nuestra imaginación. Hemos acudido a internet, a las videoconferencias o a las experiencias inmersivas en Realidad Virtual para mandar a nuestro cerebro hasta otro lugar, aunque nuestro cuerpo siga sentado en el sofá de nuestro salón.
+
+Y es que, la pandemia de la COVID-19 inició un cambio forzado en nuestro estilo de vida, medio mundo nos vimos en “cuarentena” y en distanciamiento social. Pero, que la población mundial permaneciera confinada en sus domicilios durante semanas, se ha convertido en una oportunidad para el sector de las tecnologías, como el de la Realidad Virtual.
+
+Y, aunque hasta ahora la adopción de la Realidad Virtual a nivel doméstico había sido modesta, ahora mucha gente utiliza las gafas de Realidad Virtual para jugar, quedar con sus amigos, asistir a conciertos o, incluso, teletrabajar. Esto nos ha llevado a un nuevo resurgir de esta tecnología que vive en constante evolución.
+
 Por ello vemos que cada vez está más presente en nuestras vidas cotidianas el uso de tecnologías cada vez más avanzadas y novedosas, y la realidad virtual es una de esas tecnologías que cada vez está teniendo más importancia y fuerza en el día a día.
 Por lo tanto hemos querido enfocarnos en este campo de la Realidad Virtual, y para llevar esto a cabo nos hemos basado en el framework A-Frame para crear escenas en realidad virtual.
 
@@ -258,38 +264,32 @@ El simulador tiene que ser capaz de leer trazas de redes de comunicación, elabo
 \label{sec:objetivos-especificos}
 
 En esta parte, pasaremos a realizar una breve descripción de los objetivos específicos del simulador de red:
+\newpage
 
 \begin{itemize}
 \item El programa se tiene que poder visualizar en cualquier navegador sin la necesidad de tener que instalar ningún programa o Plug-in para su uso. Además, se podrá ejecutar también desde dispositivos móviles y dispositivos de realidad virtual.
 
 \item El simulador será creado usando A-Frame.
 
-\item El simulador funcionará en varios niveles de red.
+\item El simulador podrá discriminar varios niveles de red y pondrá paquetes en funcionamiento en cada uno de ellos.
 
 \item Será un programa que podrá utilizar cualquier captura de red y poder analizar las trazas que contenga.
 
 \item Los paquetes de la traza deben poder animarse y congelarse para poder inspeccionarlos.
 
-\item El programa debe ser capaz de dibujar todos los paquetes que corresponden a la escena y los representara con distintos colores dependiendo del protocolo más alto que tenga el paquete.Los protocolos que se podrán representar son: Ethernet
-\footnote{\url{https://es.wikipedia.org/wiki/Ethernet}}
-, Ip
-\footnote{\url{https://es.wikipedia.org/wiki/Protocolo_de_internet}}
-, Tcp
-\footnote{\url{https://es.wikipedia.org/wiki/Protocolo_de_control_de_transmisión}}
-, Http \footnote{\url{https://developer.mozilla.org/es/docs/Web/HTTP}}
+\item El programa debe ser capaz de dibujar todos los paquetes que corresponden a la escena y los representara con distintos colores dependiendo del protocolo más alto que tenga el paquete.Los protocolos que se podrán representar son: Ethernet\footnote{\url{https://es.wikipedia.org/wiki/Ethernet}}
+, IP\footnote{\url{https://es.wikipedia.org/wiki/Protocolo_de_internet}}
+, TCP\footnote{\url{https://es.wikipedia.org/wiki/Protocolo_de_control_de_transmisión}}
+, HTTP\footnote{\url{https://developer.mozilla.org/es/docs/Web/HTTP}}
 
 \item El movimiento de los paquetes en la simulación se animará mediante un elemento de la escena.
 
-\item Debe aparecer encima de cada nodo, su dirección IP o Ethernet correspondiente en un cartel, según lo hayamos seleccionado a la hora de poner el documento JSON
-\footnote{\url{https://www.json.org/json-en.html}}.
+\item Debe aparecer encima de cada nodo, su dirección IP o Ethernet correspondiente en un cartel, según lo hayamos seleccionado a la hora de poner el documento JSON\footnote{\url{https://www.json.org/json-en.html}}.
 
 \item Debe ser capaz de interpretar ficheros o datos con formato JSON (JavaScript Object No-tation).
 
 \item Al pulsar en un paquete de la escena, deben desplegarse entre 1 y 4 cajas, las cuales corresponden cada una de ellas a un nivel. Deben aparecer una encima de otra y en el siguiente orden:\\
-- Arriba del todo la capa HTTP.\\
-- Debajo la capa TCP.\\
-- Debajo la capa IP.\\
--Y abajo del todo la capa Ethernet.
+Arriba del todo la capa HTTP, debajo la capa TCP, después la capa IP y abajo del todo la capa Ethernet.
 
 SOLO aparecerán las capas que tenga cada paquete, es decir si un paquete solo tiene nivel de Ethernet y de IP, solo aparecerán la caja azul y amarilla.
 
@@ -337,7 +337,7 @@ A-Frame se basa en HTML, lo que facilita su uso.Fue desarrollado para ser una fo
 Como proyecto independiente de código abierto, A-Frame se ha convertido en una de las comunidades de realidad virtual más populares en los navegadores.
 Este framework usa la arquitectura ECS (Entity Component System), usada en el desarrollo de juegos donde cada objeto es una entidad.
 
-La ventaja de este framework es que los objetos ya no están fijos en una jerarquía, por lo que ahora las posibilidades son inmensas, los objetos pueden tener un comportamiento sin límites. A-Frame permite llevar a ECS a otro nivel, A-frame es declarativo, tienen HTML y está basado en el DOM, lo que permite solucionar muchas de las debilidades de ECS.
+La ventaja de este framework es que los objetos ya no están fijos en una jerarquía, por lo que ahora las posibilidades son inmensas, los objetos pueden tener un comportamiento sin límites. A-Frame permite llevar a ECS a otro nivel, A-Frame es declarativo, tienen HTML y está basado en el DOM, lo que permite solucionar muchas de las debilidades de ECS.
 
 A continuación se muestran las capacidades que el DOM proporciona para ECS:
 \begin{itemize}
@@ -348,7 +348,7 @@ A continuación se muestran las capacidades que el DOM proporciona para ECS:
 
     \item APIs para la gestión del ciclo de vida con las API de DOM: El DOM proporciona API para actualizar los elementos HTML y el árbol. Tales como .setAttribute, .removeAttribute, .createElement y .removeChild se pueden utilizar tal y como lo usamos en el desarrollo web normal.
    
-    \item Filtro de entidad con selectores de atributos: El DOM \footnote{\url{https://desarrolloweb.com/articulos/que-es-el-dom.html}} proporciona selectores de atributos que nos permiten consultar una entidad o entidades que tienen o no ciertos atributos HTML. Esto significa que podemos solicitar entidades que tengan o no un determinado conjunto de componentes.
+    \item Filtro de entidad con selectores de atributos: El DOM\footnote{\url{https://desarrolloweb.com/articulos/que-es-el-dom.html}} proporciona selectores de atributos que nos permiten consultar una entidad o entidades que tienen o no ciertos atributos HTML. Esto significa que podemos solicitar entidades que tengan o no un determinado conjunto de componentes.
     
     \item Declarativo: Por último, el DOM proporciona HTML. A-Frame es el puente entre ECS y HTML haciendo un patrón ya limpio declarativo, legible y extensible.
 
@@ -394,7 +394,7 @@ A continuación podemos ver un ejemplo simple, el tipico (Hola Mundo) en A-Frame
 \section{Javascript} 
 \label{sec:javascript}
 
-Como hemos visto anteriormente, el lenguaje que más se utiliza en A-frame es Javascript y su DOM.
+Como hemos visto anteriormente, el lenguaje que más se utiliza en A-Frame es Javascript y su DOM.
 Ahora veremos en que se fundamenta este lenguaje, y la importancia que tiene en el proyecto.
 
 
@@ -450,54 +450,53 @@ Dado que three.js se basa en JavaScript, es relativamente fácil agregar interac
 Vamos a ver como poder crear un pequeño programa para ver su utilización.
 
 Primeramente, para cualquier programa o proyecto que empecemos debemos de crear una escena. La escena es como un universo donde podemos agregar objetos, cámaras y luces, etc.
-\begin{center}
-var scene = new THREE.Scene();
-\end{center}
+
+\begin{verbatim}
+                var scene = new THREE.Scene();
+\end{verbatim}
 A continuación tenemos que configurar la cámara, hay cámaras en perspectiva y ortográficas. Durante la mayor parte del tiempo, mantendremos la perspectiva, que es un tipo de cámara normal en el que verá objetos más cercanos, más grandes y más pequeños, cuando estén lejos.
 
 Para la cámara de ortografía, verá una vista isométrica de un ángulo específico sin perspectiva.
 Entonces el primer parámetro de la cámara es el campo de visión, básicamente es el ancho del ángulo de percepción. Configurémoslo en 75, la siguiente es la relación de aspecto, vamos a usar el ancho actual dividido por la altura.
-\begin{center}
 
-var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
-\end{center}
+\begin{verbatim}
+var camera = new THREE.PerspectiveCamera(75,window.innerWidth/
+window.innerHeight);
+\end{verbatim}
 
 Después, vamos a configurar el renderizador. Usaremos el renderizador WebGL.Puede personalizar la opción de representación aquí, como anti-aliasing. 
-\begin{center}
-var renderer = new THREE.WebGLRenderer({antialias: true});
-
-\end{center}
+\begin{verbatim}
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+\end{verbatim}
 Una vez creada la escena y configurada la cámara, podemos empezar a crear los objetos que queramos introducir en ella. 
 
 A continuación vamos a crear un cubo.
-Lo primero es crear una geometría, pensar en ella como un esqueleto para nuestro objeto. Hay muchos tipos de geometría disponibles, pero como vamos a crear un cubo, usaremos BoxGeometry con el mismo tamaño en todas las dimensiones.
-
-\begin{center}
-var geometry = new THREE.BoxGeometry(1,1,1);
-\end{center}
+Lo primero es crear una geometría, pensar en ella como un esqueleto para nuestro objeto. Usaremos BoxGeometry con todos los lados iguales.
+\begin{verbatim}
+        var geometry = new THREE.BoxGeometry(1,1,1);
+\end{verbatim}
 
 Ahora vamos a necesitar una textura para caracterizar nuestra geometría. Así que necesitamos material que defina las características de la piel, como la opacidad, el reflejo o la textura. Usemos MeshBasicMaterial (color sólido sin reflexión y cálculo de iluminación) con color rojo por ahora.
-\begin{center}
+\begin{verbatim}
 var material = new THREE.MeshBasicMaterial({color: 0xff0000});
-\end{center}
+\end{verbatim}
 Ahora podemos crear nuestro cubo creando un objeto de malla usando nuestra geometría y material y agregando el cubo a la escena.
-\begin{center}
-var cube = new THREE.Mesh(geometry,material);
-scene.add(cube);
-
-\end{center}
+\begin{verbatim}
+        var cube = new THREE.Mesh(geometry,material);
+        scene.add(cube);
+\end{verbatim}
 Pero como acabamos de agregar todo a la escena sin especificar la posición, ahora nuestro cubo está en el mismo lugar que la cámara y no se procesará. Lo colocamos en una posición de la escena que se vea y lo rotamos para que se vea como nos interese:
 
-\begin{center}
-cube.position.z = -5;
-cube.rotation.x = 10;
-cube.rotation.y = 5;
-\end{center}
+\begin{verbatim}
+                    cube.position.z = -5;
+                    cube.rotation.x = 10;
+                    cube.rotation.y = 5;
+\end{verbatim}
 
 Ahora llamamos a un método de renderizado en el objeto renderizador y le pasamos la escena y la cámara.
-\begin{center}
-renderer.render(scene,camera);
-\end{center}
+\begin{verbatim}
+                renderer.render(scene,camera);
+\end{verbatim}
 
 Con esto, ya tendríamos el cubo creado e incluido en la escena y ya estaría renderizado. Podemos incluir también una animación como la rotación a nuestro cubo para que aparezca moviéndose y ya tendríamos nuestro primer pequeño programa.
 
@@ -600,7 +599,7 @@ El funcionamiento HTML5 consiste en un proceso que solicita una página HTML a t
 Desde el navegador se realiza una petición a un servidor, lo que se hace a través de una dirección del tipo http://..../index.html. Después el servidor recupera de su disco duro esa página, la devuelve al navegador y la página se muestra.
 
 \newpage
-\section{Github} 
+\section{GitHub} 
 \label{sec:Github_info}
 
 GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Este permite a los desarrolladores colaborar y realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso. Fue comprada por Microsoft en junio del 2018. 
@@ -635,7 +634,7 @@ Sus características principales son:
     \item Buscar y reemplazar texto de una forma sencilla.
 \end{itemize}
 
-Este editor de código nos facilita la manera de programar ayudándonos a autocompletar algunos campos, y también nos facilita sobre todo a incluir nuestro código en nuestro repositorio de Github e ir actualizandolo de manera muy sencilla.
+Este editor de código nos facilita la manera de programar ayudándonos a autocompletar algunos campos, y también nos facilita sobre todo a incluir nuestro código en nuestro repositorio de GitHub e ir actualizandolo de manera muy sencilla.
 
 \begin{figure}[h]
 \centering
@@ -652,7 +651,7 @@ LaTeX, es un sistema que ayuda al usuario a preparar un documento. Con él puede
 
 La historia de LaTeX empieza con TeX, un sistema de tipografía creado por Donald E. Knuth y publicado por primera vez en 1978. Su propósito era ayudar a matemáticos, físicos e informáticos en la composición de sus textos, que habitualmente incluían nomenclatura compleja.
 
-LaTeX es una mejora o evolución de TeX, creado por Leslie Lamport en 1984, y que emplea macros de TeX para emplear composición tipográfica de una manera más simple que con el TeX original. 
+LaTeX es una capa superior de TeX, creado por Leslie Lamport en 1984, y que emplea macros de TeX para emplear composición tipográfica de una manera más simple que con el TeX original. 
 Además de para emplear notación matemática o científica de manera más cómoda que con un editor de texto genérico, también permite aplicar elementos de formato como notas al pie, índices o capítulos.
 
 La calidad de imprenta de LaTeX pueden ser usados en áreas como química, física, computación, biología, leyes, literatura, música y en cualquier otro tema el cual usen simbologías.
@@ -750,9 +749,7 @@ Todas las metodologías ágiles buscan mejorar de manera continua la forma en la
 \subsection{Etapa 0: Aprendizaje}
 
 Esta etapa es fundamental y una de las más importantes en el desarrollo del proyecto.
-En esta etapa tuve que aprender desde 0 todo sobre la tecnología A-frame, ya que no tenía ninguna noción de esta tecnología, y gracias a la documentación
-\footnote{\url{https://aframe.io/docs/1.1.0/introduction/}}, ejemplos
-\footnote{\url{https://aframe.io/}} y tutoriales conseguí aprender y poder construir escenas en realidad virtual.
+En esta etapa tuve que aprender desde 0 todo sobre la tecnología A-Frame, ya que no tenía ninguna noción de esta tecnología, y gracias a la documentación\footnote{\url{https://aframe.io/docs/1.1.0/introduction/}}, ejemplos\footnote{\url{https://aframe.io/}} y tutoriales conseguí aprender y poder construir escenas en realidad virtual.
 
 Para poner todo esto en práctica e inicializarme en el mundo de A-Frame, construí una escena con varias animaciones, texturas, luces y una componente que tiene varias propiedades, que es la que se muestra a continuación:
 
@@ -764,8 +761,7 @@ Después de todas estas pruebas llegamos a la creación de nuestra primera escen
 
 
 En esta escena podemos ver varios elementos que la componen, y algunos de ellos tienen asociada una animación.
-Si visitáis la escena
-\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Prueba_inicial/Escena_prueba.html}}, podréis ver las siguientes animaciones:
+Si visitáis la escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Prueba_inicial/Escena_prueba.html}}, podréis ver las siguientes animaciones:
 
 \begin{itemize}
 
@@ -783,16 +779,14 @@ Si visitáis la escena
 Después de haber estado practicando con la escena inicial tras haberme leído y estudiado la documentación de A-Frame y las otras tecnologías necesarias para su elaboración, pasaremos a comenzar a crear nuestro primer programa relacionado con el proyecto.
 Este programa será una aplicación sencilla [Cliente – Servidor], y avanzaremos en dos direcciones:
 
+\begin{itemize}
+\item    A-Frame:
 
-\begin{flushleft}
-A-FRAME:
-\\
 Comenzaremos construyendo una escena en la que tengamos dos cajas iniciales, una será el cliente y otra será el servidor.
 
-Incluiremos 7 paquetes que serán enviados desde el cliente(emisor) hasta el servidor(receptor), estos paquetes los empezaremos introduciendo en una lista en la que distinguiremos 3 paquetes de señalización(SYN), 2 paquetes de datos y otros 2 paquetes de Fin de conexión.
+Incluiremos 7 paquetes que serán enviados desde el cliente (emisor) hasta el servidor (receptor), estos paquetes los empezaremos introduciendo en una lista en la que distinguiremos 3 paquetes de señalización (SYN), 2 paquetes de datos y otros 2 paquetes de Fin de conexión.
 
 Estos paquetes se enviarán mediante diferentes acciones que definiremos como por ejemplo pulsar una tecla, y haremos que los paquetes se envíen de manera automática o paso a paso(break point).
-\end{flushleft}
 
 Resumen:
 \begin{itemize}
@@ -801,17 +795,17 @@ Resumen:
     \item Funcionalidad para movimiento de los paquetes.
 \end{itemize}
 
-\begin{flushleft}
-WIRESHARK:
+
+ \item Wireshark:
 
 Sacar una traza de TCP en formato JSON para poder luego analizarla y ver que campos contiene y poder extraer estos datos mediante Javascript.
-\end{flushleft}
 
+\end{itemize}
 
 Para empezar con ello, primeramente tuve que realizar unas demos para ver como controlar las entidades y gestionar llamadas a los eventos para ver como podía manejar correctamente el movimiento de los paquetes de un ordenador a otro al darle a un botón.
 
 \newpage
-Primero comencé por crearme una escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pruebas_eventos/e2.html}} básica donde únicamente tenía un cubo y al pinchar sobre el cubo apareciese una esfera a su lado:
+Primero comencé por crear una escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pruebas_eventos/e2.html}} básica donde únicamente tenía un cubo y al pinchar sobre el cubo apareciese una esfera a su lado:
 
 \begin{figure}[h]
 \centering
@@ -819,7 +813,7 @@ Primero comencé por crearme una escena\footnote{\url{https://alejandroeslo.gith
     \includegraphics[scale=0.45]{img/escena1_1b.png}
 \end{figure}
 
-Con ello comenzamos a ver como se controlan los eventos, y en este ejemplo podemos apreciar el evento creado con la función “ created\_sphere” que nos creara esa esfera azul al pinchar en el cubo.
+Con ello comenzamos a ver como se controlan los eventos, y en este ejemplo podemos apreciar el evento creado con la función “created\_sphere” que nos creara esa esfera azul al pinchar en el cubo.
 
 \begin{figure}[h]
 \centering
@@ -852,7 +846,7 @@ Y en la escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pruebas
     \includegraphics[scale=0.3]{img/escena1_3b.png}
 \end{figure}
 
-Ahora podemos ver el evento creado con la función “ change\_box2” ahora incluimos el manejador, que es un componente que hemos creado anteriormente para darle la animación a la esfera amarilla.
+Ahora podemos ver el evento creado con la función “change\_box2” ahora incluimos el manejador, que es un componente que hemos creado anteriormente para darle la animación a la esfera amarilla.
 
 \begin{figure}[h]
 \centering
@@ -861,7 +855,7 @@ Ahora podemos ver el evento creado con la función “ change\_box2” ahora inc
 \end{figure}
 
 \newpage
-Después de todas estas pruebas llegamos a la creación de nuestra primera escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/P1.html}} del proyecto, que está compuesta por 2 ordenadores que se intercambian los 7 paquetes que indicábamos anteriormente(3 paquetes de señalización(SYN), 2 paquetes de datos y otros 2 paquetes de Fin de conexión) al pulsar el botón azul.
+Después de todas estas pruebas llegamos a la creación de nuestra primera escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/P1.html}} del proyecto, que está compuesta por 2 ordenadores que se intercambian los 7 paquetes que indicábamos anteriormente (3 paquetes de señalización (SYN), 2 paquetes de datos y otros 2 paquetes de Fin de conexión) al pulsar el botón azul.
 Los paquetes empezarán con un color, y una vez que lleguen al destino se volverán verdes.
 
 \begin{figure}[h]
@@ -881,21 +875,19 @@ Los paquetes empezarán con un color, y una vez que lleguen al destino se volver
 
 \subsection{Etapa 2: Primer prototipo}
 
-Después de haber creado nuestra primera escena con animaciones de los paquetes entre cliente y servidor, ahora vamos a aumentar el número de nodos(ordenadores) y conectarlos entre sí mediante tubos transparentes.Avanzaremos en 2 direcciones diferentes :
-\begin{flushleft}
-ANIMACIÓN:
+Después de haber creado nuestra primera escena con animaciones de los paquetes entre cliente y servidor, ahora vamos a aumentar el número de nodos(ordenadores) y conectarlos entre sí mediante tubos transparentes. Avanzaremos en 2 direcciones diferentes:
+\begin{itemize}
+    \item Animación:
 \\
 Crearemos varios ordenadores mas distribuidos en la escena e interconectados todos a través 	de unos tubos transparentes por los cuales se enviaran y recibirán los paquetes.
-\end{flushleft}
 
-\begin{flushleft}
-WIRESHARK:
+\item Wireshark:
 
 Trataremos de leer las capturas exportadas en JSON desde JavaScript. Para ello lo que 	haremos sera recibir el fichero JSON de la red mediante http y pedir este fichero mediante 	GET para convertirlo después en un objeto y poderlo mostrar por la linea de comandos del 	navegador.
 
-Crearemos un bucle para leer(por ejemplo: las direcciones Ethernet de todos los paquetes de la captura), y después mostrarlos a través de la linea de comandos del navegador
+Crearemos un bucle para leer(por ejemplo: las direcciones Ethernet de todos los paquetes de la captura), y después mostrarlos a través de la linea de comandos del navegador.
 
-\end{flushleft}
+\end{itemize}
 
 En esta etapa nos centraremos en crear una escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/P2.html}} más grande, con mayor número de ordenadores interconectados entre sí a través de tuberías transparentes por las cuales se enviaran los paquetes después de pulsar el botón que iniciara la animación.
 
@@ -903,7 +895,7 @@ Comenzaremos con la creación y colocación de los nodos(ordenadores) con unas p
 
 \begin{figure}[h]
 \centering
-    \includegraphics[scale=0.57]{img/paso2_1a.png}
+    \includegraphics[scale=0.5]{img/paso2_1a.png}
 \end{figure}
 
 A continuación, pasaremos a crear los 7 paquetes que queremos intercambiar, de manera que cada uno de ellos empiece desde uno de estos nodos que hemos creado anteriormente y llegue hasta otro diferente. Los crearemos de manera manual, creando las entidades a mano, sin automatizar aun el proceso, y serían los siguientes:
@@ -999,15 +991,14 @@ Y obtendremos las direcciones IP y Ethernet recorriendo estos campos:
 \subsection{Etapa 3: Componentes}
 Ahora comenzaremos con la creación de los componentes para crear de una manera más automatizada los elementos que van a componer nuestra escena.
 
-Empezamos con la construcción del componente para los nodos\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/Demos_componentes/P3_1b.html}}.
-. Este componente creará cada uno los nodos con su correspondiente color y posición, que le será enviada al componente como una variable. Aquí podemos ver el componente:
+Empezamos con la construcción del componente para los nodos\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/Demos_componentes/P3_1b.html}}. Este componente creará cada uno los nodos con su correspondiente color y posición, que le será enviada al componente como una variable. Aquí podemos ver el componente:
 
 \begin{figure}[h]
 \centering
     \includegraphics[scale=0.6]{img/node1.png}
 \end{figure}
 
-Y crearemos las entidades con los parámetros que nos interesa pasarle luego a nuestro componente “node”:
+Y crearemos las entidades con los parámetros que nos interesa pasarle luego a nuestro componente \texttt{node}:
 
 
 \begin{figure}[h]
@@ -1022,9 +1013,9 @@ El resultado que obtendremos será el siguiente:
     \includegraphics[scale=0.44]{img/componenteNODE.png}
 \end{figure}
 
-A continuación crearemos el componente connection, que será el que conectara nuestros nodos mediante tuberías transparentes.
+A continuación crearemos el componente \texttt{connection}, que será el que conectara nuestros nodos mediante tuberías transparentes.
 
-Crearemos las entidades para cada tubería, añadiéndoles el componente connection con los atributos TO y FROM que le introduciremos manualmente de momento.
+Crearemos las entidades para cada tubería, añadiéndoles el componente \texttt{connection} con los atributos TO y FROM que le introduciremos manualmente de momento.
 
 \begin{figure}[h]
 \centering
@@ -1033,21 +1024,21 @@ Crearemos las entidades para cada tubería, añadiéndoles el componente connect
 
 Más tarde, estos campos los rellenaremos con los datos que extraigamos del archivo JSON.
 
-Ahora vamos a crear el componente connection, cuya función va a ser la de crear las tuberías transparentes que conectan los nodos.
+Ahora vamos a crear el componente \texttt{connection}, cuya función va a ser la de crear las tuberías transparentes que conectan los nodos.
 
 \begin{figure}[h]
 \centering
     \includegraphics[scale=0.7]{img/comp_conn.png}
 \end{figure}
 
-Cogeremos la posición TO y FROM del nodo correspondiente a su Id, y pasaremos estas coordenas a String para luego poderlas pasar como atributo al objeto y crear el elemento.
-Aquí podemos ver el ejemplo de las coordenadas FROM:
+Cogeremos la posición \texttt{to} y \texttt{from} del nodo correspondiente a su Id, y pasaremos estas coordenas a String para luego poderlas pasar como atributo al objeto y crear el elemento.
+Aquí podemos ver el ejemplo de las coordenadas \texttt{from}:
 \begin{figure}[h]
 \centering
     \includegraphics[scale=0.6]{img/datos_from.png}
 \end{figure}
 
-Y en esta parte añadiriamos las coordenadas al elemento “tube”,para que nos cree esas conexiones.
+Y en esta parte añadiriamos las coordenadas al elemento \texttt{tube}, para que nos cree esas conexiones.
 \begin{figure}[h]
 \centering
     \includegraphics[scale=0.7]{img/puesta_datos.png}
@@ -1060,9 +1051,9 @@ Y la escena final se vería de esta forma:
     \includegraphics[scale=0.7]{img/componenteCONNECTION.png}
 \end{figure}
 
-Por último, crearemos el componente Packet, que será el encargado de ir creando todos los paquetes que vaya encontrando e incluyéndolos en la escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/Demos_componentes/P3_3a.html}}.
+Por último, crearemos el componente \texttt{packet}, que será el encargado de ir creando todos los paquetes que vaya encontrando e incluyéndolos en la escena\footnote{\url{https://alejandroeslo.github.io/TFG/Pruebas/Pasos_seguidos/Demos_componentes/P3_3a.html}}.
 
-La entidad creada en este caso estará compuesta por el componente packet, que tendrá los siguientes argumentos:color, duración, nodo from, nodo to, tiempo de comienzo:
+La entidad creada en este caso estará compuesta por el componente \texttt{packet}, que tendrá los siguientes argumentos:color, duración, nodo from, nodo to, tiempo de comienzo:
 
 
 \begin{figure}[h]
@@ -1070,7 +1061,7 @@ La entidad creada en este caso estará compuesta por el componente packet, que t
     \includegraphics[scale=0.7]{img/entidad_packet.png}
 \end{figure}
 
-Y en el componente packet obtendremos también las posiciones TO y FROM de los nodos correspondientes, para saber desde donde va el paquet y hasta donde irá:\\
+Y en el componente \texttt{packet} obtendremos también las posiciones \texttt{to} y \texttt{from} de los nodos correspondientes, para saber desde donde va el paquet y hasta donde irá:\\
 
     \includegraphics[scale=0.7]{img/pos_packet1.png}
 
@@ -1092,8 +1083,8 @@ Y la escena  final sería así:
 
 \newpage
 \subsection{Etapa 4: Componente Net Simulator}
-En este apartado crearemos un nuevo componente, que será el más importante, se trata del componente net-simulator.
-Este componente se encargará de sacar todos los datos necesarios para la creación de la escena, y luego irlos pasando a los componentes correspondientes para crear todos los elementos de la escena, nodos, conexiones y paquetes.
+En este apartado crearemos un nuevo componente, que será el más importante, se trata del componente \texttt{net-simulator}.
+Este componente se encargará de sacar todos los datos necesarios para la creación de la escena, y luego irlos pasando a los componentes correspondientes (\texttt{node}, \texttt{packet}, \texttt{connection} y \texttt{poster}) para crear todos los elementos de la escena, nodos, conexiones y paquetes.
 
 Primeramente este componente lo que creará serán todos los nodos que encuentre en la captura, ira iterando por todas las direcciones IP o Ethernet y con ellas creara los nodos de la escena. Aquí comenzaremos creando los nodos de forma lineal para ver como será el funcionamiento, y finalmente acabaremos colocándolos en estructura circular, para que sean visibles todos los nodos.
 
@@ -1105,8 +1096,6 @@ Y por último, creara los paquetes que vengan en la captura y los colocara en el
 Ahora nos ocuparemos de la funcionalidad del botón, para poder controlar la animación correctamente de los paquetes.
 
 Para ello utilizaremos el manejador de tiempos de set interval, para poder iniciar la animación, parar la animación y también reanudar la animación.
-
-Crearemos una función para controlar la animación:
 \begin{figure}[h]
 \centering
     \includegraphics[scale=0.52]{img/func_run.png}
@@ -1130,7 +1119,7 @@ Por último en esta etapa, cogeremos las direcciones IP o Ethernet de cada nodo 
 
 \subsection{Etapa 6: Creación de capas y escena final}
 
-En esta última etapa veremos la creación de las capas en los paquetes y las demos finales.
+En esta etapa veremos la creación de las capas en los paquetes y las demos finales.
 
 Para terminar la escena hemos introducido en cada uno de los paquetes, las capas de internet que tienen con los datos más relevantes de cada una de ellas. Estas capas no estarán incluidas en todos los paquetes, cada paquete solo mostrará aquellas capas que traiga incorporadas en la captura realizada, es decir, si un paquete solo tiene capa IP y Ethernet, solamente se mostraran estas capas, en cambio si también tiene TCP y HTTP, mostrara las 4 capas.
 
@@ -1163,6 +1152,36 @@ Y para finalizar, crearemos las escenas finales, donde se verán todos los eleme
     \includegraphics[scale=0.52]{img/din2.png}
 \end{figure}
 
+\newpage
+\subsection{Etapa 7:Aplicación en realidad virtual}
+Esta última etapa ha consistido en la familiarización con las gafas y mandos de realidad virtual, que en mi caso he utilizado las oculus quest, y con la modificación de las escenas para poder visualizarlas y desplazarnos por ellas en Realidad Virtual.
+
+\begin{figure}[h]
+\centering
+    \includegraphics[scale=0.28]{img/gafas_oculus.jpg}
+\end{figure}
+
+Gracias a que nuestros componentes están hechos con A-Frame, y cada uno de ellos se podría utilizar de manera independiente en otros proyectos, únicamente con pocas líneas de código somos capaces de controlar el movimiento y las animaciones en la escena.
+
+Para poder interactuar con los objetos y botones de la escena y podernos mover por ella con los mandos de las gafas de realidad virtual, he tenido que incluir las siguientes líneas de comandos:
+
+\begin{figure}[h]
+\centering
+    \includegraphics[scale=0.7]{img/codigoVR.png}
+\end{figure}
+
+\begin{itemize}
+    \item El componente \texttt{movement-controls} actúa como una plataforma para la cámara. 
+    
+    \item El parámetro \texttt{fly: true} es para permitir que la cámara se mueva por encima y por debajo del plano horizontal (Y = 0).
+    
+    \item Incluiremos también la entidad cursor que ya habíamos utilizado anteriormente y la entidad camera con la modificación de añadirle el parámetro \texttt{look-controls}
+    
+    \item \texttt{Laser-controls} se ocupa del trazado de rayos láser en la escen para seleccionar un objeto con el mando.
+    
+\end{itemize}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTADOS %
@@ -1173,11 +1192,16 @@ Y para finalizar, crearemos las escenas finales, donde se verán todos los eleme
 \section{Manual de usuario}
 \subsection{Usuario de una escena ya constriuida}
 
-En este apartado explicaremos como usar la aplicación en un usuario a nivel alto, es decir, como un usuario con la aplicación ya desplegada en el navegador debería usarla.
+En este apartado explicaremos como usar la aplicación en un usuario a nivel alto, es decir, como un usuario con la aplicación ya desplegada en el navegador (una página HTML que incluye ya el simulador y la traza para dibujar la escena completa) debería usarla.
+Diferenciaremos entre usuarios de escritorio, que abrirán la escena desde un ordenador, tablet o cualquier dispositivo móvil y los usuarios de realidad que utilizarán las gafas de realidad virtual para visualizar la escena.
 
-Lo primero que deberán de hacer es acceder a una de las demos que hay disponible en mi github\footnote{\url{https://github.com/AlejandroEsLo/TFG}}(demo1\footnote{\url{https://alejandroeslo.github.io/TFG/Demo1_100Packets.html}}, demo2\footnote{\url{https://alejandroeslo.github.io/TFG/Demo2_HTTPPackets.html}}) y abrirla en un navegador.
+\begin{itemize}
 
-Una vez nos encontremos en la escena, podremos movernos con las flechas del teclado hacia adelante, hacia atrás y hacia ambos dados. Ayudados del ratón, podremos girar sobre la escena y desplazarnos por toda la escena y acercarnos o alejarnos hacia la parte que nos interese.
+    \item \underline{Usuarios de Escritorio.} 
+    
+Primeramente accederemos al repositorio GitHub\footnote{\url{https://github.com/AlejandroEsLo/TFG}}, dónde tendremos disponibles dos demos para visualizar, Demo1\_100Packets.html\footnote{\url{https://alejandroeslo.github.io/TFG/Demo1_100Packets.html}} y  Demo2\_HTTPPackets.html\footnote{\url{https://alejandroeslo.github.io/TFG/Demo2_HTTPPackets.html}}, elegiremos la que deseemos y la abriremos en un navegador.
+
+Una vez nos encontremos en la escena, podremos movernos con las flechas del teclado hacia adelante, hacia atrás y hacia ambos lados. Para movernos en diferentes ángulos, podremos ayudarnos del ratón, pulsaremos con el click izquierdo del ratón y sin soltarlo moveremos el ratón para girar sobre la escena y desplazarnos por toda la escena.
 
 Para poner en funcionamiento la animación de los paquetes, deberemos de colocarnos enfrente del botón y pulsarlo con un click del ratón, esto nos permitirá empezar la animación de los paquetes. De esta misma forma, podremos detener los paquetes para analizarlos, y volverlos a poner en marcha cuando queramos de nuevo.
 \begin{figure}[h]
@@ -1199,34 +1223,57 @@ Para ver la información que trae cada capa, volvemos a pinchar en cada uno de e
 
 Para cerrar cada subnivel, volvemos a pinchar en el subnivel seleccionado y si queremos salir de la visión de los subniveles, volvemos a pinchar sobre el paquete y se volverán a ocultar.
 
+\item \underline{Usuarios de Realidad Virtual.} 
+
+Para este tipo de usuario, el acceso a la escena es similar que el explicado en el usuario de escritorio, hay que acceder a un navegador y del repositorio anteriormente mencionado elegir la escena que queramos visualizar.
+
+Una vez se nos abra la escena en el navegador de las gafas de realidad virtual, con uno de los mandos apuntaremos hacia el botón que nos da acceso a la realidad virtual, que está colocado en la parte inferior izquierda, es el siguiente:
+
+\begin{figure}[h]
+\centering
+    \includegraphics[scale=0.5]{img/accesoVR.png}
+\end{figure}
+
+Pulsaremos al gatillo de atrás del mando cuando estemos sobre este botón y nos meteremos en la escena de realidad virtual. Ahora ya estamos inmersos en la escena y podremos empezar a desplazarnos por ella.
+
+Una vez estemos en la escena con el joystick del mando izquierdo podremos desplazarnos por la escena. Para movernos tendremos que mirar hacia donde queremos ir y con el joystick apuntar hacia esa dirección, por ejemplo, si queremos subir en la escena y situarnos más arriba, lo que podemos hacer es mirar hacia abajo y darle al joystick hacia atrás y con eso subiremos en la escena hacia arriba.
+
+El mando derecho, nos aparecerá en la escena con un láser azul. Este nos permitirá apuntar sobre cualquier botón u objeto con el que queramos interaccionar, y presionando el gatillo de atrás accionaremos el botón u objeto al que estemos apuntando con el láser.
+
+Para poner en marcha y ver las capas de cada paquete, lo que haremos es apuntar con el láser del mando derecho al botón o a los paquetes y darle al gatillo para poder visualizar tanto la animación de los paquetes con el botón, como las capas desplegadas en cada uno de los paquetes.
+
+\end{itemize}
 \subsection{Usuario que construye una escena}
 
-En este apartado veremos como ya un usuario avanzado puede  crear el mismo una escena con los datos que él desee introducir en el programa.
+En este apartado veremos como ya un usuario avanzado puede  crear él mismo una escena.
 
-Primeramente realizaremos la captura JSON en Wireshark de la red que nos interese analizar.
-
-Después la exportaremos como un archivo JSON, para ello:
+Primeramente realizaremos la captura de red en Wireshark de la red que nos interese analizar,y la exportaremos como un archivo JSON, para ello:
 \begin{enumerate}
     \item Pincharemos sobre la pestaña Archivo.
     \item Buscaremos la opción Exportar análisis de paquetes.
     \item Y elegiremos la opción exportar como JSON.
 \end{enumerate}
-Con esto ya tendríamos exportada nuestra captura para poderla introducir en el programa y crear la escena de dicha captura.
 
-A continuación, lo que hay que hacer es descargarse el repositorio TFG\footnote{\url{https://github.com/AlejandroEsLo/TFG}} de mi github.
-
-Una vez descargado, los archivos que nos interesaran para utilizar seran los siguientes:
+Un ejemplo de captura en Wireshark sería la siguiente:
 \begin{figure}[h]
 \centering
-    \includegraphics[scale=0.8]{img/archivos.png}
+    \includegraphics[scale=0.3]{img/cap_wireshark.png}
 \end{figure}
 
-El primer archivo (100packets\_demo1.json)es la captura JSON que he utilizado yo para la demo, y que sustituiremos por la que queramos usar nosotros. Podemos cambiarle el nombre al archivo si queremos.
+Con esto ya tendríamos exportada nuestra captura para poderla introducir en el programa y crear la escena de dicha captura.
 
-El segundo archivo (Demo1\_100Packets.html) es el archivo HTML principal desde donde se cargara el archivo JavaScript con todo el programa completo.
+A continuación, lo que hay que hacer es descargarse la demo básica HTML \texttt{demo\_pruebas.html}\footnote{\url{https://github.com/AlejandroEsLo/TFG/blob/master/demo_pruebas.html}} de mi repositorio de GitHub. Se trata de una escena vacía en la que se incluye una escena de referencia, pero sin ningún entorno gráfico ni botones adicionales, únicamente se incluyen los repositorios básicos para el funcionamiento del programa.
 
+\begin{figure}[h]
+\centering
+    \includegraphics[scale=0.55]{img/escena_vacia.png}
+\end{figure}
 
-En este archivo podemos ver los parámetros que tiene el componente Net Simulator, y son los siguientes:
+Si nos interesasen también por ejemplo, el environment que utilizamos, la posición de la cámara, o el botón de instrucciones, se pueden obtener de las demos que se encuentran alojadas en el mismo repositorio y son las siguientes:
+
+\texttt{Demo1\_100Packets.html}\footnote{\url{https://github.com/AlejandroEsLo/TFG/blob/master/Demo1_100Packets.html}} y \texttt{Demo2\_HTTPPackets.html}\footnote{\url{https://github.com/AlejandroEsLo/TFG/blob/master/Demo2_HTTPPackets.html}}
+
+En este archivo podemos ver los parámetros que tiene el componente \texttt{net-simulator}, y son los siguientes:
 
 \begin{figure}[h]
 \centering
@@ -1242,25 +1289,33 @@ En este archivo podemos ver los parámetros que tiene el componente Net Simulato
     \end{itemize}
 \end{itemize}
 
-Estos archivos debene estar en la misma carpeta junto al archivo principal Javascript NetSimulator(NetSimulator.js).
+Una vez realizados todos estos pasos, e introducida correctamente la captura en el archivo, tendremos varias opciones para visualizar la escena: 
 
-Una vez realizados todos estos pasos, e introducida correctamente la captura en el archivo, procederemos a ejecutar un servidor local con Python para visualizarlo en cualquier navegador.
+\begin{itemize}
+    \item La primera opcion es ejecutar un servidor local con Python para visualizarlo en cualquier navegador.
 
 Para ello, nos situaremos en la carpeta que tengamos los anteriores archivos y abriremos un terminal, y escribiremos la siguiente línea de comandos:
 
-\begin{figure}
+\begin{figure}[h]
 \centering
     \includegraphics[scale=0.7]{img/server_python.png}
 \end{figure}
 
-\newpage
 Después nos dirigimos a cualquier navegador y escribimos la siguiente dirección(teniendo en cuenta el nombre de nuestro archivo si lo hemos cambiado):
 
 \begin{center}
-http://localhost:8000/Demo1\_100Packets.html
+http://localhost:8000/demo\_pruebas.html
 \end{center}
 
-También podemos ejecutar las demos que hay directamente desde el repositorio de GitHub que antes hacia referencia TFG, y en el README, al pulsar sobre cualquier dirección, te ejecutara la demos para poder visualizarla.
+Y en esa página ya podremos visualizar nuestra escena completa con todos los cambios o complementos que le hayan sido añadidos.
+
+\item Podemos crearnos un repositorio en GitHub donde alojemos el archivo y lo vayamos actualizando, y esta plataforma nos servirá como servidor, y desde ahí podremos acceder a nuestra escena.
+
+\item También podemos ejecutar las demos que hay directamente desde el repositorio de GitHub\footnote{\url{https://github.com/AlejandroEsLo/TFG}}, y en el README, al pulsar sobre cualquier dirección, te ejecutara la demos para poder visualizarla.
+
+\end{itemize}
+
+
 
 \section{Manual técnico}
 
@@ -1269,11 +1324,14 @@ del programa y que elementos lo componen.
 
 Los elementos principales del programa son los componentes. Los componentes son módulos de JavaScript que se pueden mezclar, combinar y componer en entidades para crear apariencia, comportamiento y funcionalidad.
 
-Los componentes que componen el simulador son 5: componente poster, componente node, componente connection, componente packet y el componente net-simulator. Este último componente será el más importante, ya que será el que relacionara todos los componentes y creara la escena final.
+Los componentes que componen el simulador son 5: componente poster, componente \texttt{node}, componente \texttt{connection}, componente \texttt{packet} y el componente \texttt{net-simulator}. Este último componente será el más importante, ya que será el que cree todos los componentes para su funcionamiento y relacionara todos los componentes para crear la escena final.
+
+Cada uno de estos componentes es una pieza individual del programa y se podrían utilizar en cualquier otro programa, ya que cualquiera de estos componentes puede funcionar por separado.
 
 \subsection{Componente Node}
 
 Este componente será el encargado de crear todos los nodos que sean necesarios en la escena. Tendrá cuatro argumentos de entrada, que le podremos pasar cuando queramos utilizar el componente, que son los siguientes:
+\newpage
 
 \begin{figure}[h]
 \centering
@@ -1309,7 +1367,7 @@ Este componente será el encargado de crear todos los nodos que sean necesarios 
 
 En la escena final se verían los nodos de la siguiente forma:
 \begin{center}
-    \includegraphics[scale=0.58]{img/componenteNode_modelo.png}
+    \includegraphics[scale=0.4]{img/componenteNode_modelo.png}
 \end{center}
 
 
@@ -1405,7 +1463,7 @@ Los argumentos de entrada que tenemos son:
 
 Este componente será uno de los más importantes, ya que tendrá varias funcionalidades, las cuales pasaremos a explicar a continuación.
 
-La primera funcionalidad de este componente será la de crear los paquetes primero y situarlos sobre la escena. Esto lo hará cogiendo los datos de las variables anteriormente nombradas, y también obteniendo las posiciones de cada uno de los nodos origen y destino que tendrán que tomar para saber desde qué nodo tendrá que salir el paquete y hasta cuál tendrá que desplazarse. Esto lo haremos igual que en el componente “connection”, utilizando getElementById del argumento para saber las coordenadas de origen y destino del paquete.
+La primera funcionalidad de este componente será la de crear los paquetes primero y situarlos sobre la escena. Esto lo hará cogiendo los datos de las variables anteriormente nombradas, y también obteniendo las posiciones de cada uno de los nodos origen y destino que tendrán que tomar para saber desde qué nodo tendrá que salir el paquete y hasta cuál tendrá que desplazarse. Esto lo haremos igual que en el componente \texttt{connection}, utilizando getElementById del argumento para saber las coordenadas de origen y destino del paquete.
 Con todos estos datos, crearemos los paquetes ya en la escena:
 
 \begin{figure}[h]
@@ -1534,7 +1592,7 @@ Después procederemos a dibujarlos poniendo los atributos correspondientes usand
 \subsection{Componente Net-simulator}
 
 
-Este componente será el más importante de todo el programa, ya que su función será la de unir todos los componentes anteriormente mencionados y enviarles todos los datos necesarios para después poder dibujar cada elemento en su correspondiente posición.
+Este componente será el más importante de todo el programa. Se trata de una arquitectura modular, es decir, cada uno de los componentes puede funcionar por separado, y este componente tiene la función de unir todos los componentes anteriormente mencionados y ponerlos en funcionamiento.
 
 Tiene dos argumentos de entrada, que son los siguientes:
 
@@ -1577,7 +1635,7 @@ como las direcciones IP:
 
 Ahora pasaremos a ir creando todos los elementos que queremos incluir en la escena. Primeramente comenzaremos por colocar los nodos de la escena.
 
-Comenzaremos creando una pequeña condición que dependerá del argumento que hayamos puesto al principio en el componente Net-simulator, y dependiendo del protocolo de entrada que hayamos metido, cogeremos el array con los datos de la capa Ethernet o la capa IP.
+Comenzaremos creando una pequeña condición que dependerá del argumento que hayamos puesto al principio en el componente \texttt{net-simulator}, y dependiendo del protocolo de entrada que hayamos metido, cogeremos el array con los datos de la capa Ethernet o la capa IP.
 
 
 \begin{center}
@@ -1610,7 +1668,7 @@ Incrementaremos el ángulo también para colocar los nodos correctamente.
 \end{center}
 
 
-Después añadiremos los atributos necesarios al componente “node” para que nos cree todos los nodos.
+Después añadiremos los atributos necesarios al componente \texttt{node} para que nos cree todos los nodos.
 
 
 \begin{center}
@@ -1659,7 +1717,7 @@ Después crearemos un “for” que recorrerá todo este array para coger los da
     \includegraphics[scale=0.7]{img/forConne_comp_netsim.png}
 \end{center}
 
-Después añadiremos los atributos necesarios al componente “connection” para que nos cree estas tuberías.
+Después añadiremos los atributos necesarios al componente \texttt{connection} para que nos cree estas tuberías.
 
 \begin{center}
     \includegraphics[scale=0.7]{img/atribConn_comp_netsim.png}
@@ -1692,7 +1750,7 @@ Por último veremos cuál es el protocolo más alto que contiene cada paquete, y
     \includegraphics[scale=0.7]{img/protoColorFInal_comp_netsim.png}
 \end{center}
 
-Para acabar enviaremos todos estos valores obtenidos al componente “packet”, para que con ellos elabore todos los paquetes correspondientes:
+Para acabar enviaremos todos estos valores obtenidos al componente \texttt{packet}, para que con ellos elabore todos los paquetes correspondientes:
 
 \begin{center}
     \includegraphics[scale=0.7]{img/atribPAckt_comp_netsim.png}
@@ -1723,6 +1781,8 @@ Hemos logrado superar el objetivo general que era construir un simulador de rede
 en Realidad Virtual, el cual podrá visualizarse en cualquier dispositivo que tenga navegador
 web y en dispositivos de realidad virtual. Sin duda, este objetivo esta más que superado, ya que finalmente hemos podido construir este simulador, que es capaz de leer una captura de trazas de red de Wireshark, exportándolos en un JSON, y con los datos obtenidos crear una escena en realidad virtual en la que se dibujan todos los elementos que la componen.
 
+Hemos construido un simulador de paquetes en realidad virtual, en el que utilizamos una arquitectura modular, esto nos permitirá utilizar cualquiera de los componentes creados para interaccionar con cualquier otro elemento o programa de A-Frame. Se trata del primero o uno de los primeros simuladores de redes en Realidad Virtual, ya que no se han hecho aun ninguno de este tipo, y esto da más valor a este proyecto, ya que no teníamos ninguna referencia con la que orientarnos.
+
 Centrándonos un poco más en los objetivos específicos, se han logrado concluir con éxito todos los objetivos previstos. Primeramente queríamos que el programa se pudiera visualizar de manera sencilla en cualquier navegador y sin tener que instalar ningún programa externo, y además de ello, poder verlo en cualquier dispositivo móvil o dispositivos de realidad virtual, esto lo hemos conseguido gracias a que hemos ido almacenando todo el proyecto en un repositorio de GitHub y con una simple dirección URL, puedes acceder a cualquiera de las demos que se encuentran alojadas en ese repositorio.
 
 Otro gran objetivo era el de familiarizarnos y entender el framework de A-Frame. Esta librería es fundamental en nuestro proyecto, por lo que desde el principio nos hemos metido en profundidad con toda su documentación y ejemplos que hemos ido creando para ir entendiendo mejor esta tecnología y poder progresar correctamente en nuestro proyecto.
@@ -1740,7 +1800,7 @@ A lo largo del grado he podido aprender conocimientos de muchas ramas diferentes
 Empezamos el grado con la asignatura de Informática I, en la cual te introducen de una manera sencilla, en el mundo de la programación y te enseñan los conceptos básicos y fundamentales para ello.
 
 Después vamos avanzando en otras asignaturas como por ejemplo Informática II, Gráficos y Visualización en 3D, Laboratorio de Tecnologías Audiovisuales en la Web, Construcción de Servicios y Aplicaciones Audiovisuales en Internet, en las cuales ya nos vamos centrando en diferentes lenguajes de programación y en programas y conceptos más complejos, con los que iremos ampliando nuestros conocimientos y mejorando nuestras habilidades como programadores. En estas asignaturas hemos aprendido a usar Python, JavaScript y HTML, estas dos últimas son en las que se basan nuestro simulador.
-
+\newpage
 Por otro lado hemos visto también en asignaturas como Protocolos para la Transmisión de Audio y Video en Internet, Arquitectura de Internet y en Sistemas Telemáticos para Medios Audiovisuales, todo lo relacionado con las redes de comunicaciones, fundamentos de estas comunicaciones, protocolos de red, infraestructuras de red, ejemplos y utilización de estas redes... y de este conjunto de asignaturas hemos podido obtener información sobre todo de los protocolos y del comportamiento de los paquetes y las redes, para poderlo aplicar de manera correcta en nuestro simulador.
 
 
@@ -1754,9 +1814,9 @@ A lo largo del Trabajo Fin de Grado he podido ampliar mis conocimientos en los s
   
   \item Crear y manejar componentes enteros dentro de mi programa y poder utilizarlos dentro de otros componentes.
   
-  \item Importación de modelos 3D para incorporarlos en la escena y hacer que sean un elemento más en ella.
+  \item Importación de modelos gltf en 3D para incorporarlos en la escena y componerlo con otros componentes de A-Frame para hacer que sean un elemento más en ella.
   
-  \item Manejo de eventos y modificación de elementos a tiempo real mediante el uso de JavaScript.
+  \item Programacion orientada al manejo de eventos y modificación de elementos a tiempo real mediante el uso de JavaScript.
   
   \item He aprendido a manipular el DOM haciendo uso de las herramientas del DOM mediante JavaScript.
   
@@ -1765,6 +1825,33 @@ A lo largo del Trabajo Fin de Grado he podido ampliar mis conocimientos en los s
   \item Uso de LaTeX para la edición de textos científicos y técnicos.
   
 \end{enumerate}
+
+\newpage
+
+\section{Esfuerzo realizado}
+\label{sec:esfuerzo}
+
+El proyecto lo comencé a mediados de Octubre de 2020, por lo que la duración total del proyecto ha sido alrededor de 8 meses. Al comienzo del proyecto y hasta finales de año, tuve menos tiempo para dedicarle al tiempo, ya que tenía que compaginarlo con el horario laboral, y solo podía dedicarle tiempo los fines de semana y entre semana un par de horas por la tarde después de salir de trabajar.
+
+Después en los meses de Enero, Febrero y Marzo, le dediqué prácticamente todos los días unas 4 horas por la mañana y 2 o 3 horas más por la tarde, ya que durante estos meses no tenía trabajo y pude dedicarle mucho más esfuerzo y tiempo al desarrollo del proyecto.
+
+En Abril y Mayo ya volví a trabajar y al tener ya el proyecto más encaminado, me fue más fácil poder dedicarle tiempo y avanzar en él y le dedicaba algunas tardes entre semana y los fines de semana para progresar en el proyecto.
+
+El tiempo aproximado dedicado para cada una de las etapas es el siguiente:
+
+\begin{itemize}
+    \item Etapa 0: Comienzo a mediados de Octubre y finaliza al comienzo de Noviembre.
+
+    \item Etapa 1: Comienzo a principios de Noviembre hasta mediados de Diciembre.
+
+    \item Etapa 2: Desde mediados de Diciembre hasta finales de Enero.
+
+    \item Etapa 3 y 4: Desde Febrero hasta Abril.
+
+    \item Etapa 5 y 6: A lo largo del mes de Abril y comienzos de Mayo.
+
+    \item Etapa 7: Durante Mayo.
+\end{itemize}
 
 \newpage
 \section{Trabajos futuros}
@@ -1780,6 +1867,8 @@ En este apartado podemos ver reflejadas las posibles mejoras o implementaciones 
     \item Podría crearse una barra de tiempo(estilo YouTube) para ver en que momento de la animación te encuentras, saber cuanto te queda para finalizar la animación, o poder deslizarte sobre ella y avanzar o retroceder la animación.
     
     \item Se podría crear un archivo JSON de una red por ejemplo local, con los elementos que la componen y sus direcciones y asignarle un modelo 3D de un elemento diferente(switch, ordenador, móvil...), y con esto podríamos obtener una escena más exacta con los elementos que la componen. Es decir, si el programa detecta una dirección que corresponde a un switch, te dibuje un switch como nodo en vez de un ordenador, o cualquier elemento que queramos incorporarle.
+    
+    \item También es posible coger cualquier funcionalidad de un analizador de paquetes, en este caso de Wireshark, e incorporarlas al simulador para que sea capaz de interpretarlas.
 \end{itemize}
 
 
@@ -1814,10 +1903,10 @@ En este apartado podemos ver reflejadas las posibles mejoras o implementaciones 
 
 \nocite{Aframe-playground}
 
-\nocite{overleaf}
-
 \nocite{event}
 
-\nocite{}
+\nocite{Javascript}
+
+\nocite{three}
 
 \end{document}
